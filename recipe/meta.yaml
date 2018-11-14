@@ -1,6 +1,6 @@
 {% set name = "psy-simple" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "f1718e08b3301df1e82318335a673af40b2e078c6eda5911defb2417c798eb99" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "d81f2d0b0ab993673309dbf908a1c14d3abe4fccb4061a505f5126c06a170c6a" %}
 
 package:
   name: {{ name|lower }}
@@ -13,12 +13,12 @@ source:
 
 build:
   number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
   build:
   - python
-  - setuptools
+  - pip
   run:
   - python
   - psyplot
