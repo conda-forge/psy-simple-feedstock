@@ -1,7 +1,7 @@
 About psy-simple
 ================
 
-Home: https://github.com/Chilipp/psy-simple
+Home: https://github.com/psyplot/psy-simple
 
 Package license: GPL-2.0-only
 
