@@ -3,7 +3,7 @@ About psy-simple
 
 Home: https://github.com/psyplot/psy-simple
 
-Package license: GPL-2.0-only
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/psy-simple-feedstock/blob/master/LICENSE.txt)
 
@@ -11,7 +11,7 @@ Summary: Psyplot plugin for simple visualization tasks
 
 Development: https://github.com/psyplot/psy-simple
 
-Documentation: http://psyplot.readthedocs.io/projects/psy-simple
+Documentation: http://psyplot.github.io/psy-simple
 
 This psyplot plugin provides plot methods for simple visualization tasks
 like 2D plots, line plots, bar plots, etc.
