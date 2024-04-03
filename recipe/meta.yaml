@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     - matplotlib-base >=2.0
-    - {{ pin_compatible('psyplot', max_pin='x.x') }}
+    - {{ pin_compatible('psyplot', max_pin='x.x', lower_bound='1.5.0') }}
 
 test:
   imports:
