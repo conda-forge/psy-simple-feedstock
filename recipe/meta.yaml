@@ -1,6 +1,6 @@
 {% set name = "psy-simple" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "4c46ee4822ca7a5a4280894b6e4844d3c5a1da94954a9a72d007f40e5c9284b2" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "3946465346d63ccc47c2e6eba3061594cdac3fb37d88570a1c22e2737bf79140" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  script: python -m pip install . --no-deps --ignore-installed -vvv
-  skip: true  # [py < 37]
+  number: 0
+  skip: true  # [py<39]
+  script: {{ PYTHON }} -m pip install . --no-deps -vvv
 
 requirements:
   build:
@@ -23,29 +23,32 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - versioneer
+    - tomli
   run:
     - python
     - matplotlib-base >=2.0
-    - {{ pin_compatible('psyplot', max_pin='x.x') }}
+    - {{ pin_compatible('psyplot', max_pin='x.x', lower_bound='1.5.0') }}
 
 test:
   imports:
     - psy_simple
+    - psy_simple.plotters
 
 about:
-  home: https://github.com/psyplot/psy-simple
+  home: https://codebase.helmholtz.cloud/psyplot/psy-simple
   license: LGPL-3.0-only
   license_family: GPL
   license_file:
-    - COPYING
-    - COPYING.LESSER
+    - LICENSES/
   summary: Psyplot plugin for simple visualization tasks
 
   description: |
     This psyplot plugin provides plot methods for simple visualization tasks
     like 2D plots, line plots, bar plots, etc.
   doc_url: http://psyplot.github.io/psy-simple
-  dev_url: https://github.com/psyplot/psy-simple
+  dev_url: https://codebase.helmholtz.cloud/psyplot/psy-simple
 
 extra:
   recipe-maintainers:
