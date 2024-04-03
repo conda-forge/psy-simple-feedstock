@@ -1,6 +1,6 @@
 {% set name = "psy-simple" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "4c46ee4822ca7a5a4280894b6e4844d3c5a1da94954a9a72d007f40e5c9284b2" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "3946465346d63ccc47c2e6eba3061594cdac3fb37d88570a1c22e2737bf79140" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install . --no-deps --ignore-installed -vvv
   skip: true  # [py < 37]
 
