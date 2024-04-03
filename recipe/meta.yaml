@@ -34,7 +34,6 @@ requirements:
 test:
   imports:
     - psy_simple
-    - psy_simple.plugin
     - psy_simple.plotters
 
 about:
