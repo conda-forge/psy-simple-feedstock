@@ -1,6 +1,6 @@
 {% set name = "psy-simple" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "3946465346d63ccc47c2e6eba3061594cdac3fb37d88570a1c22e2737bf79140" %}
+{% set version = "1.5.1" %}
+{% set sha256 = "52d39d79fe11f04d5e47736ab626497f53e5f9c611e6287157dff3d37887b1dd" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . --no-deps -vvv
 
